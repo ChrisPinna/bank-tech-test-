@@ -16,5 +16,14 @@
   "devDependencies": {
     "eslint": "^8.14.0",
     "eslint-plugin-react": "^7.29.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChrisPinna/bank-tech-test-.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/ChrisPinna/bank-tech-test-/issues"
+  },
+  "homepage": "https://github.com/ChrisPinna/bank-tech-test-#readme"
 }

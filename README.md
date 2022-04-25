@@ -30,3 +30,16 @@ date || credit || debit || balance
 14/01/2023 || || 500.00 || 2500.00
 13/01/2023 || 2000.00 || || 3000.00
 10/01/2023 || 1000.00 || || 1000.00
+```
+
+## How to install
+  in the terminal run the folowing commands
+  - npm init
+  - npm install jest
+
+## Aproach 
+  - I tried to solve the probem in the most simplistic way possible
+  - The bank class holds a record of balance justifying the need of a class since it's state changes the output of the methods
+  - the deposit an withdrawl methods both are very similar, they first add or subract their ammount from the balance. Second they build a transaction string. Third they puch that string into the transactions array.
+  - The accountStatement method builds the account statement string and returns it. First it uses an if statement to check that there have been transactions, if there isn't then it returns a hardcoded string with no transactions on it. Second if there are transactions it adds a string that clarifies the order of the information of the account statement (date || credit || debit || balance). Third it joins the array into a singular string. Forth it returns the stirng so that it can be displayed
+  

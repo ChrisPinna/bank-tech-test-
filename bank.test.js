@@ -1,10 +1,10 @@
 const Bank = require('./bank');
 
 describe('Class Bank', () => {
-  test('it can deposite into the account', () => {
+  test('it can deposit into the account', () => {
     expect(() => {
       const bank = new Bank;
-       bank.deposite(1000.00, '10/01/2023') 
+       bank.deposit(1000.00, '10/01/2023') 
       }).not.toThrow();
   });
 
@@ -20,9 +20,9 @@ describe('Class Bank', () => {
     expect(bank.accountStatement()).toBe("date || credit || debit || balance\n || || || ");
   });
 
-  test('accountStatement method return a bank statement with one deposite', () => {
+  test('accountStatement method return a bank statement with one deposit', () => {
     const bank = new Bank;
-    bank.deposite(1000.00, '10/01/2023');
+    bank.deposit(1000.00, '10/01/2023');
     expect(bank.accountStatement())
     .toBe("date || credit || debit || balance\n10/01/2023 || 1000.00 || || 1000.00");
   });
@@ -34,10 +34,10 @@ describe('Class Bank', () => {
     .toBe("date || credit || debit || balance\n14/01/2023 || || 500.00 || -500.00");
   });
 
-  test('accountStatement method returns a statement with two deposite', () => {
+  test('accountStatement method returns a statement with two deposit', () => {
     const bank = new Bank;
-    bank.deposite(1000.00, '10/01/2023');
-    bank.deposite(1000.00, '10/01/2023');
+    bank.deposit(1000.00, '10/01/2023');
+    bank.deposit(1000.00, '10/01/2023');
     expect(bank.accountStatement())
     .toBe("date || credit || debit || balance\n10/01/2023 || 1000.00 || || 2000.00\n10/01/2023 || 1000.00 || || 1000.00");
   });
