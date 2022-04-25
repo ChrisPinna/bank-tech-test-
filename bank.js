@@ -4,7 +4,7 @@ class Bank {
     this.transactions = [];
   }
   accountStatement() {
-    if (this.#noTransactions) {
+    if (this.#noTransactions()) {
       return "date || credit || debit || balance\n || || || ";
     } else {
       this.transactions.reverse();
